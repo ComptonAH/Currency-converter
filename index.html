@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/styles.css">
+    <script src="https://kit.fontawesome.com/281f149710.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <h1 class="container-header">
+        <div class="row">
+            <div class="col-xl-10 container-head">Converter of currencies</div>
+            <div class="col-md-2">
+                <div class="row">
+                    <div class="col"><i class="fa-solid fa-gear"></i></div>
+                    <div class="col"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </div>
+            </div>
+        </div>
+    </h1>
+    <div class="container-inputs">
+        <div class="row border-inputs">
+            <div class="col-xl-5 inputs">
+                <div class="row">
+                    <select class="dropdown" id="dropdown-menu-left" onchange="checkMenuValues(this, document.getElementById('dropdown-menu-right'))">
+                    </select>
+                </div>
+                <div class="row">
+                    <input required type="number" class="amount-cur" id="num-input-left" placeholder="Enter the amount"
+                        value="">
+                </div>
+                <div class="row left-top-curs">
+                    <div class="col left-col-1">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-left" id="btn-left-1"
+                            value="EUR">EUR</button>
+                    </div>
+                    <div class="col left-col-2">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-left" id="btn-left-2"
+                            value="USD">USD</button>
+                    </div>
+                    <div class="col left-col-3">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-left" id="btn-left-3"
+                            value="RUB">RUB</button>
+                    </div>
+                    <div class="col left-col-4">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-left" id="btn-left-4"
+                            value="GBP">GBP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 reverse-btn-col">
+                <div class="row">
+                    <button type="button" class="btn btn-primary" id="convert-btn" onclick="swapCurs()"><i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-primary" id="reverse-btn" onclick="convertCur()"><i
+                            class="fa-solid fa-arrows-rotate"></i></button>
+                </div>
+                <div class="row space-btwn-top-curs"></div>
+            </div>
+            <div class="col-xl-5 inputs">
+                <div class="row">
+                    <select class="dropdown" id="dropdown-menu-right" onchange="checkMenuValues(this, document.getElementById('dropdown-menu-left'))">
+                    </select>
+                </div>
+                <div class="row">
+                    <input type="number" class="amount-cur" id="num-input-right" value="" readonly>
+                </div>
+                <div class="row right-top-curs">
+                    <div class="col right-col-1">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-right" id="btn-right-1"
+                            value="EUR">EUR</button>
+                    </div>
+                    <div class="col right-col-2">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-right" id="btn-right-2"
+                            value="USD">USD</button>
+                    </div>
+                    <div class="col right-col-3">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-right" id="btn-right-3"
+                            value="RUB">RUB</button>
+                    </div>
+                    <div class="col right-col-4">
+                        <button type="button" class="btn btn-primary btn-cur btn-cur-right" id="btn-right-4"
+                            value="GBP">GBP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
